@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "DuckToy",
+      "startDate": "03-02-2018",
+      "endDate": "03-02-2018",
+      "image": "image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rubic Cube",
+      "startDate": "03-02-2018",
+      "endDate": "03-02-2018",
+      "image": "image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Plastic Man",
+      "startDate": "03-02-2018",
+      "endDate": "03-02-2018",
+      "image": "image3.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Safyan",
+      "lastName": "Akram"
+    },
+    {
+      "id": 2,
+      "firstName": "Muneeb",
+      "lastName": "Khan"
+    },
+    {
+      "id": 3,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    }
+  ]
+}

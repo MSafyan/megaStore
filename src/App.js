@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, Fragment } from "react";
+import "./App.css";
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import NavBar from "./components/layout/NavBar";
+import Home from "./components/pages/Home";
+import Register from "./components/pages/Register";
+import Login from "./components/pages/Login";
+
+const App = () => {
+  useEffect(() => {
+    //initialize Material UI
+    M.AutoInit();
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <NavBar />
+        <div className="container teal lighten-5">
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/login" component={Login}></Route>
+            <Route exact path="/register" component={Register}></Route>
+          </Switch>
+        </div>
+      </Fragment>
+    </Router>
   );
-}
+};
 
 export default App;
